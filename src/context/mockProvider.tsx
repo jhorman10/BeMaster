@@ -8,8 +8,6 @@ type Props = {
 
 export const MockContextProvider: React.FC<Props> = ({ children }: Props) => {
   return (
-    <MockContext.Provider value={{ userMocks }}>
-      {children}
-    </MockContext.Provider>
+    <MockContext.Provider value={userMocks}>{children}</MockContext.Provider>
   );
 };

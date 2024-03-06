@@ -3,7 +3,7 @@ interface User {
     password: string;
 }
 
-const users: User[] = [
+export const userMocks: User[] = [
     { email: "usuario1@example.com", password: "contraseña1" },
     { email: "usuario2@example.com", password: "contraseña2" },
     { email: "usuario3@example.com", password: "contraseña3" },
@@ -15,5 +15,3 @@ const users: User[] = [
     { email: "usuario9@example.com", password: "contraseña9" },
     { email: "usuario10@example.com", password: "contraseña10" }
 ];
-
-export default users;

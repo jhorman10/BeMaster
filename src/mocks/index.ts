@@ -1,1 +1,1 @@
-export { default as userMocks } from './userMocks';
+export { userMocks } from './userMocks';

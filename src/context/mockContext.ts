@@ -1,3 +1,8 @@
 import { createContext } from "react";
 
-export const MockContext = createContext({})
+type User = {
+    email: string;
+    password: string;
+};
+
+export const MockContext = createContext<User[]>([ { email: "", password: "" } ])

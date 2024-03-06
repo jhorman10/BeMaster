@@ -1,3 +1,11 @@
-import { createContext } from "react";
+import { createContext, Dispatch, SetStateAction } from 'react';
 
-export const LoginContext = createContext({})
+type LoginContextType = {
+    isLoggedIn: boolean;
+    setIsLoggedIn: Dispatch<SetStateAction<boolean>>;
+};
+
+export const LoginContext = createContext<LoginContextType>({
+    isLoggedIn: false,
+    setIsLoggedIn: () => { },
+});

@@ -1,11 +1,11 @@
-import { ReactNode, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { LoginContext } from './loginContext';
 
 type Props = {
   children: ReactNode;
 };
 
-export const LoginContextProvider: React.FC<Props> = ({ children }: Props) => {
+export const LoginContextProvider: React.FC<Props> = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   return (
