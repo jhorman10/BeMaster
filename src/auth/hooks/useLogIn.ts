@@ -8,11 +8,11 @@ type User = {
 }
 
 export const useLogIn = ({ email, password }: User) => {
-    const userMocks = useContext(MockContext);
+    const { users } = useContext(MockContext);
     const { setIsLoggedIn } = useContext(LoginContext)
 
     const handleLogin = (): void | null => {
-        const user: User | undefined = userMocks.find(user => user.email === email && user.password === password);
+        const user: User | undefined = users.find(user => user.email === email && user.password === password);
         if (user) {
             setIsLoggedIn(true);
         } else {

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { userMocks } from '../mocks';
+import { userMocks, videoMocks } from '../mocks';
 import { MockContext } from './mockContext';
 
 type Props = {
@@ -7,7 +7,9 @@ type Props = {
 };
 
 export const MockContextProvider: React.FC<Props> = ({ children }: Props) => {
+  const contextValue = { users: userMocks, categories: videoMocks };
+
   return (
-    <MockContext.Provider value={userMocks}>{children}</MockContext.Provider>
+    <MockContext.Provider value={contextValue}>{children}</MockContext.Provider>
   );
 };

@@ -1,1 +1,3 @@
-export { userMocks } from './userMocks';
+export * from './userMocks';
+export * from './videoMocks';
+

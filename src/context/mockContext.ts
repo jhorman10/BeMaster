@@ -1,8 +1,23 @@
 import { createContext } from "react";
 
-type User = {
+interface User {
     email: string;
     password: string;
-};
+}
 
-export const MockContext = createContext<User[]>([ { email: "", password: "" } ])
+interface Category {
+    title: string;
+    synopsis: string;
+    intro: string;
+    image: string;
+}
+
+interface ContextData {
+    users: User[];
+    categories: Category[];
+}
+
+export const MockContext = createContext<ContextData>({
+    users: [],
+    categories: []
+});
