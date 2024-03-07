@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { NavBar } from '../components/navBar';
+import { NavBar } from '../components';
 import './style.css';
 
 type Props = {

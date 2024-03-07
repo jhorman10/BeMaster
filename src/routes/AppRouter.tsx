@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { DashboardRoutes } from '../Dashboard/routes/DashboardRoutes';
 import { LoginContext } from '../auth/context/loginContext';
-import { Login } from '../auth/pages/login/index';
-import { DashboardRoutes } from '../dashboard/routes/DashboardRoutes';
+import { Login } from '../auth/pages/Login/index';
 
 export const AppRouter = () => {
   const { isLoggedIn } = useContext(LoginContext);
@@ -10,14 +10,11 @@ export const AppRouter = () => {
   return (
     <Routes>
       {isLoggedIn ? (
-        <Route path="/" element={<DashboardRoutes />} />
+        <Route path="*" element={<DashboardRoutes />} />
       ) : (
         <Route path="/login" element={<Login />} />
       )}
-      <Route
-        path="/*"
-        element={isLoggedIn ? <Navigate to="/" /> : <Navigate to="/login" />}
-      />
+      <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
   );
 };

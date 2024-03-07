@@ -14,7 +14,7 @@ export const NavBar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="navbar-brand">
-        <span className="navbar-title">BeMaster Games</span>
+        <span className="navbar-title">BeMaster Videos</span>
       </div>
       <button
         className={`navbar-toggle ${isOpen ? 'open' : ''}`}

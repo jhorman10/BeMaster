@@ -15,9 +15,19 @@ interface Category {
 interface ContextData {
     users: User[];
     categories: Category[];
+    technology: Category[];
+    cock: Category[];
+    fitness: Category[];
+    travels: Category[];
+    science: Category[];
 }
 
 export const MockContext = createContext<ContextData>({
     users: [],
-    categories: []
+    categories: [],
+    technology: [],
+    cock: [],
+    fitness: [],
+    travels: [],
+    science: [],
 });
