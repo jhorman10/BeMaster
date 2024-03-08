@@ -8,9 +8,9 @@ export const Home = () => {
   const { categories } = useContext(MockContext);
   return (
     <DashBoardLayout>
-      <div className="Cards-container">
+      <div className="Cards-container" id="home">
         {categories.map((category) => (
-          <Card category={category} />
+          <Card key={category.title} cat={category} />
         ))}
       </div>
     </DashBoardLayout>

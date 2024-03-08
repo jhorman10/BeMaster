@@ -30,7 +30,7 @@ export const NavBar: React.FC = () => {
           </Link>
         </li>
         <li>
-          <Link to="/perfil" className="navbar-link">
+          <Link to="/profile" className="navbar-link">
             Perfil
           </Link>
         </li>

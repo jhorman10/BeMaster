@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import { ContentCategory } from '../pages/ContentCategory';
+import { CategoryRouter } from '../pages/ContentCategory/router/categoryRouter';
 import { Home } from '../pages/Home';
-import { ContentDetails } from '../pages/components';
+import { Profile } from '../pages/Profile';
 
 export const DashboardRoutes = () => {
   return (
     <Routes>
       <Route path="*" element={<Home />} />
-      <Route path="/category/:id" element={<ContentCategory />} />
-      <Route path="/category/:id/details/:id" element={<ContentDetails />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/:category/*" element={<CategoryRouter />} />
     </Routes>
   );
 };
