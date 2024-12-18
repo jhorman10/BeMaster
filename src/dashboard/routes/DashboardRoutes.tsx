@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { CategoryRouter } from '../pages/ContentCategory/router/categoryRouter';
+import { CategoryRouter } from '../pages/ContentCategory/router/CategoryRouter';
 import { Home } from '../pages/Home';
 import { Profile } from '../pages/Profile';
 
