@@ -4,7 +4,7 @@ export const fetchHeroes = async () => {
     try {
         const response = await characterApi.get('', {
             params: {
-                limit: 10,
+                limit: 20,
             },
         });
         return response.data.data.results;

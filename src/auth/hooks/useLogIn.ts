@@ -18,9 +18,6 @@ export const useLogIn = ({ email, password }: User) => {
 
     const handleLogin = (): void | null => {
         const user: User | undefined = users.find(user => user.email === email && user.password === password);
-        // if (!captchaVerified) {
-        //     Swal.fire('Error', 'Por favor, verifica el captcha', 'error');
-        // }
         if (user) {
             navigate('/');
             setIsLoggedIn(true);

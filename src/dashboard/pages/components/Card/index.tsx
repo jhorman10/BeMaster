@@ -1,8 +1,10 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './style.css';
 
 interface Category {
+  id: string;
   title: string;
   synopsis: string;
   intro: string;
@@ -16,10 +18,13 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ cat }) => {
-  const { title, intro, image, synopsis, url } = cat;
+  const { title, intro, image, synopsis, id } = cat;
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/${id}`);
+  };
   return (
-    // <Link to={`${url?.toLocaleLowerCase()}`}>
-    <div className="card">
+    <div className="card" onClick={handleClick}>
       <img src={image} alt={title} className="card-image" />
       <div className="card-content">
         <h2 className="card-title">{title}</h2>
@@ -27,6 +32,5 @@ export const Card: React.FC<CardProps> = ({ cat }) => {
         <p className="card-intro">{intro}</p>
       </div>
     </div>
-    // </Link>
   );
 };

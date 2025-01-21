@@ -14,6 +14,7 @@ export const Home = () => {
           <Card
             key={hero.id}
             cat={{
+              id: hero.id,
               title: hero.name,
               synopsis: hero.description || 'No description available.',
               intro: `Last modified: ${new Date(

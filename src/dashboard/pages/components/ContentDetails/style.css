@@ -1,0 +1,85 @@
+.card-detail {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.card-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-detail-content {
+    margin-top: 20px;
+}
+
+.card-detail-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.card-detail-synopsis {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.card-detail-intro {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.card-detail-resource {
+    font-size: 1rem;
+    color: #3182ce;
+    margin-top: 10px;
+}
+
+.urls-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.url-item {
+    text-decoration: none;
+    color: #3182ce;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.url-item:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+}
+
+.url-item:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.5);
+}
+
+.comics-section,
+.stories-section,
+.events-section,
+.series-section {
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #2d3748;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+    color: #4a5568;
+}
