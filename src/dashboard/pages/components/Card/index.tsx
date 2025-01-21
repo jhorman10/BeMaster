@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './style.css';
 
 interface Category {
@@ -16,20 +16,17 @@ interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ cat }) => {
-  const params = useParams();
-  console.log(params);
-
   const { title, intro, image, synopsis, url } = cat;
   return (
-    <Link to={`${url?.toLocaleLowerCase()}`}>
-      <div className="card">
-        <img src={image} alt={title} className="card-image" />
-        <div className="card-content">
-          <h2 className="card-title">{title}</h2>
-          <p className="card-synopsis">{synopsis}</p>
-          <p className="card-intro">{intro}</p>
-        </div>
+    // <Link to={`${url?.toLocaleLowerCase()}`}>
+    <div className="card">
+      <img src={image} alt={title} className="card-image" />
+      <div className="card-content">
+        <h2 className="card-title">{title}</h2>
+        <p className="card-synopsis">{synopsis}</p>
+        <p className="card-intro">{intro}</p>
       </div>
-    </Link>
+    </div>
+    // </Link>
   );
 };

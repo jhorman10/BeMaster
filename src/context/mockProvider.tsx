@@ -1,12 +1,7 @@
-import { ReactNode } from 'react';
-import { userMocks, videoMocks } from '../mocks';
-import {
-  cock,
-  fitness,
-  science,
-  technology,
-  travels,
-} from '../mocks/videoMocks/index';
+import React, { ReactNode, useEffect, useState } from 'react';
+import { fetchHeroes } from '../api';
+import { Result } from '../Dashboard/pages/interface/hero.interface';
+import { userMocks } from '../mocks';
 import { MockContext } from './mockContext';
 
 type Props = {
@@ -14,14 +9,24 @@ type Props = {
 };
 
 export const MockContextProvider: React.FC<Props> = ({ children }: Props) => {
+  const [heroes, setHeroes] = useState<Result[]>([]);
+
+  useEffect(() => {
+    const loadHeroes = async () => {
+      const response = await fetchHeroes();
+      if (Array.isArray(response)) {
+        setHeroes(response);
+      } else {
+        console.error('Invalid data format:', response);
+      }
+    };
+
+    loadHeroes();
+  }, []);
+
   const contextValue = {
     users: userMocks,
-    categories: videoMocks,
-    technology,
-    cock,
-    travels,
-    fitness,
-    science,
+    Hero: heroes,
   };
 
   return (

@@ -1,6 +1,6 @@
 .card {
-    width: 250px;
-    min-height: 410px;
+    max-width: 250px;
+    max-height: 410px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -18,7 +18,9 @@
 }
 
 .card-content {
-    padding: 20px;
+    padding: 10px;
+    height: 165px;
+    overflow-y: auto;
 }
 
 .card-title {

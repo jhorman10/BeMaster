@@ -5,12 +5,24 @@ import { Card } from '../components';
 import './style.css';
 
 export const Home = () => {
-  const { categories } = useContext(MockContext);
+  const { Hero } = useContext(MockContext);
+
   return (
     <DashBoardLayout>
       <div className="Cards-container" id="home">
-        {categories.map((category) => (
-          <Card key={category.title} cat={category} />
+        {Hero.map((hero) => (
+          <Card
+            key={hero.id}
+            cat={{
+              title: hero.name,
+              synopsis: hero.description || 'No description available.',
+              intro: `Last modified: ${new Date(
+                hero.modified
+              ).toLocaleDateString()}`,
+              image: `${hero.thumbnail.path}.${hero.thumbnail.extension}`,
+              url: hero.resourceURI,
+            }}
+          />
         ))}
       </div>
     </DashBoardLayout>
