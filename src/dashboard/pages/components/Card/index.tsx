@@ -21,7 +21,7 @@ export const Card: React.FC<CardProps> = ({ cat }) => {
   const { title, intro, image, synopsis, id } = cat;
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(`/${id}`);
+    navigate(`/characters/${id}`);
   };
   return (
     <div className="card" onClick={handleClick}>
